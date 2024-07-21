@@ -7,7 +7,7 @@ import multer from "multer";
 import { ImageModel } from "../../database/allModels";
 
 // Validations
-// import { ValidateImageFile } from "../../validation/image";
+import { ValidateImageFile } from "../../validation/image";
 
 // utilities
 import { s3Upload } from "../../Utils/AWS/s3";
@@ -62,7 +62,7 @@ Router.post("/", upload.single("file"), async (req, res) => {
 
        const uploadImage = await s3Upload(bucketOptions);
 
-       // await ImageModel.create({images : [ { location: uploadImage.Location } ]});
+       await ImageModel.create({images : [ { location: uploadImage.Location } ]});
 
        return res.status(200).json({ uploadImage });
    }catch(error){

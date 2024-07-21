@@ -6,7 +6,7 @@ import passport from "passport";
 import { OrderModel } from "../../database/allModels";
 
 // Validation
-//import { ValidateOrderId, ValidateOrderNewId } from "../../validation/order";
+import { ValidateOrderId, ValidateOrderNewId } from "../../validation/order";
 
 const Router = express.Router();
 

@@ -6,7 +6,7 @@ import passport from "passport";
 import { UserModel } from "../../database/allModels";
 
 // Validations
-//import { ValidateUserId, ValidateUserData } from "../../validation/user";
+import { ValidateUserId, ValidateUserData } from "../../validation/user";
 
 const Router = express.Router();
 
@@ -59,8 +59,8 @@ Method         PUT
 
 Router.put("/update/:userID", async (req, res) => {
     try{
-        //await ValidateUserId(req.params);
-        //await ValidateUserData(req.body);
+        await ValidateUserId(req.params);
+        await ValidateUserData(req.body);
         const{ userID } = req.params;
         const{ userData } = req.body;
 

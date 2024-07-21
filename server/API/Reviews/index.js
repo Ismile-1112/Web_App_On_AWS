@@ -6,7 +6,7 @@ import passport from "passport";
 import { ReviewModel } from "../../database/allModels";
 
 // Validation
-//import { ValidateNewReview, ValidateReviewId } from "../../validation/review";
+import { ValidateNewReview, ValidateReviewId } from "../../validation/review";
 
 const Router = express.Router();
 
