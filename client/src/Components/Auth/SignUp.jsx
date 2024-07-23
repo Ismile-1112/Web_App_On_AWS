@@ -1,4 +1,4 @@
-import { Dialog, Transition } from '@headlessui/react';
+import { Dialog, DialogTitle, Transition, TransitionChild } from '@headlessui/react';
 import { Fragment, useState } from 'react';
 import { FcGoogle } from "react-icons/fc";
 import { useDispatch } from "react-redux";
@@ -41,7 +41,7 @@ export default function SignUp({ isOpen, setIsOpen }) {
           onClose={closeModal}
         >
           <div className="min-h-screen px-4 text-center">
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter="ease-out duration-300"
               enterFrom="opacity-0"
@@ -51,7 +51,7 @@ export default function SignUp({ isOpen, setIsOpen }) {
               leaveTo="opacity-0"
             >
               <Dialog.Overlay className="fixed inset-0" />
-            </Transition.Child>
+            </TransitionChild>
 
             {/* This element is to trick the browser into centering the modal contents. */}
             <span
@@ -60,7 +60,7 @@ export default function SignUp({ isOpen, setIsOpen }) {
             >
               &#8203;
             </span>
-            <Transition.Child
+            <TransitionChild
               as={Fragment}
               enter="ease-out duration-300"
               enterFrom="opacity-0 scale-95"
@@ -70,11 +70,11 @@ export default function SignUp({ isOpen, setIsOpen }) {
               leaveTo="opacity-0 scale-95"
             >
               <div className="inline-block w-full max-w-md p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
-                <Dialog.Title
+                <DialogTitle
                   as="h3"
                   className="text-lg font-medium leading-6 text-gray-900"
                 >
-                </Dialog.Title>
+                </DialogTitle>
                 <div className="mt-2 flex flex-col gap-3 w-full">
                   <button onclick={googlesignup} className="py-2 justify-center rounded-lg flex items-center gap-2 w-full border-gray-400 bg-white text-gray-700 hover:bg-gray-100">
                       Sign up with google <FcGoogle />
@@ -118,7 +118,7 @@ export default function SignUp({ isOpen, setIsOpen }) {
                   </form>
                 </div>
               </div>
-            </Transition.Child>
+            </TransitionChild>
           </div>
         </Dialog>
       </Transition>

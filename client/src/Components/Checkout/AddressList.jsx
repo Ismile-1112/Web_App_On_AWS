@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { RadioGroup } from '@headlessui/react';
+import { RadioGroup, Label, Radio } from '@headlessui/react';
 
 export default function AddressList(props) {
   const [selected, setSelected] = useState(props.address[0])
@@ -8,10 +8,10 @@ export default function AddressList(props) {
     <div className="w-full">
       <div className="w-full max-w-md mx-auto">
         <RadioGroup value={selected} onChange={setSelected}>
-          <RadioGroup.Label className="sr-only">Server size</RadioGroup.Label>
+          <Label className="sr-only">Server size</Label>
           <div className="space-y-2">
             {props.address.map((item) => (
-              <RadioGroup.Option
+              <Radio
                 key={item.name}
                 value={item.name}
                 className={({ active, checked }) =>
@@ -57,7 +57,7 @@ export default function AddressList(props) {
                     </div>
                   </>
                 )}
-              </RadioGroup.Option>
+              </Radio>
             ))}
           </div>
         </RadioGroup>

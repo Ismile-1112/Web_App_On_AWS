@@ -1,4 +1,4 @@
-import { Route, Redirect, Switch } from "react-router-dom";
+import { Route, Redirect } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import React, { useEffect } from "react";

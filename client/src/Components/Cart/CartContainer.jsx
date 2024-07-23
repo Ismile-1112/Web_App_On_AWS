@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import{ IoMdArrowDropdown, IoMdArrowDropup, IoMdArrowDropright} from "react-icons/io";
+import React, { useState } from 'react';
+import{ IoMdArrowDropup, IoMdArrowDropright} from "react-icons/io";
 import {  IoCloseSharp  } from "react-icons/io5";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router";
 
 // components
 import FoodItem from './FoodItem';
 
 // redux action 
-import { getCart } from '../../Redux/Reducer/Cart/Cart.action';
+//import { getCart } from '../../Redux/Reducer/Cart/Cart.action';
 
 const CartSM = ({ toggle }) => {
     const reduxState = useSelector((global) => global.cart.cart);
@@ -48,9 +48,9 @@ const CartLg = ({ toggle }) => {
 
 const CartContainer = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const [cartData, setCartData] = useState([]);
+    //const [cartData, setCartData] = useState([]);
 
-    const dispatch = useDispatch();
+    //const dispatch = useDispatch();
     const reduxState = useSelector((global) => global.cart.cart);
 
     const toggleCart = () => setIsOpen((prev) => !prev);

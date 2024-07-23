@@ -1,4 +1,4 @@
-import axios from "axios";
+//import axios from "axios";
 
 // Redux types
 import { GET_CART, ADD_CART, DELETE_CART, INCREMENT_QTY, DECREMENT_QTY } from "./Cart.type";

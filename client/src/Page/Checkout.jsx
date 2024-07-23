@@ -1,19 +1,19 @@
 import React from 'react';
 import { BsShieldLockFill } from "react-icons/bs";
-import { useSelector, useDispatch } from "react-redux";
-import Razorpay from "razorpay";
+import { useSelector } from "react-redux";
+//import Razorpay from "razorpay";
 
 // components
 import FoodItem from '../Components/Cart/FoodItem';
 import AddressList from '../Components/Checkout/AddressList';
 
 // redux action
-import { createOrder } from '../Redux/Reducer/Order/order.action';
+//import { createOrder } from '../Redux/Reducer/Order/order.action';
 
 const Checkout = () => {
     const reduxStateCart = useSelector((global) => global.cart.cart);
     const reduxStateUser = useSelector((global) => global.user.user.user);
-    const dispatch = useDispatch();
+    //const dispatch = useDispatch();
 
     const address =[
         {
