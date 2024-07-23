@@ -1,7 +1,7 @@
 // Library
 import express from "express";
-import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
+//import bcrypt from "bcryptjs";
+//import jwt from "jsonwebtoken";
 import passport from "passport";
 
 // Models
@@ -84,7 +84,7 @@ Method         GET
 
 Router.get("/google/callback", passport.authenticate("google", {failureRedirect: "/"}),
   (req, res) => {
-      return res.json({token: req.session.passport.user.token});
+      return res.redirect(`http://localhost:3000/google/${req.session.passport.user.token}`);
   }
 );
 
